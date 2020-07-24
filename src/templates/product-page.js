@@ -11,6 +11,7 @@ export const ProductPageTemplate = ({
   description,
   intro,
   buttonText,
+  price,
 }) => (
   <div className="content">
     <div
@@ -42,7 +43,7 @@ export const ProductPageTemplate = ({
               </div>
           </div>
           <div className="column is-7 is-offset-1">
-              <BuyButton price="10.000" text={buttonText} />
+              <BuyButton price={price} text={buttonText} />
           </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -64,23 +65,45 @@ ProductPageTemplate.propTypes = {
     blurbs: PropTypes.array,
   }),
   buttonText: PropTypes.string,
+  price: PropTypes.string,
 }
 
-const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+class ProductPage extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <Layout>
-      <ProductPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        buttonText={frontmatter.buttonText}
-      />
-    </Layout>
-  )
+    this.state = {
+      price: '',
+    }
+  }
+
+  componentDidMount() {
+    this.fetchPrice()
+  }
+
+  fetchPrice = () => {
+    return fetch('https://products-dev.bemer.services/en_US/shop/v1/products/420200')
+      .then(resp => resp.json())
+      .then(({ price: { amount } }) => this.setState({ price: amount }))
+  }
+
+  render() {
+    const { frontmatter } = this.props.data.markdownRemark
+    const {price} = this.state
+    return (
+      <Layout>
+        <ProductPageTemplate
+          image={frontmatter.image}
+          title={frontmatter.title}
+          heading={frontmatter.heading}
+          description={frontmatter.description}
+          intro={frontmatter.intro}
+          buttonText={frontmatter.buttonText}
+          price={price}
+        />
+      </Layout>
+    )
+  }
 }
 
 ProductPage.propTypes = {
