@@ -14,6 +14,12 @@ description: The control unit B.BOX Professional will impress you with its
   memory locations.
 intro:
   blurbs:
+    - image: /img/400_freestyle-b-box-professional-05.jpg
+      headline: Technical Specifications
+      text: >
+        * Dimensions (L x W x H): 23 x 22 x 7/16 cm * Weight: 2500g * 2-in-1
+        Functionality * Edit mode * Large, easy-to-read touch display * Memory
+        card slot * Sleep and regeneration program * Dual Control functionality
     - image: /img/100_hero-bundle-b-box-pro-b-scan-white-cool.jpg
       headline: Technical Specifications
       text: >
@@ -22,10 +28,4 @@ intro:
         variety of coffee beans grown with great care for the environment and
         local communities. Check our post or contact us directly for current
         availability.
-    - image: /img/400_freestyle-b-box-professional-05.jpg
-      headline: Technical Specifications
-      text: >
-        * Dimensions (L x W x H): 23 x 22 x 7/16 cm * Weight: 2500g * 2-in-1
-        Functionality * Edit mode * Large, easy-to-read touch display * Memory
-        card slot * Sleep and regeneration program * Dual Control functionality
 ---
