@@ -31,20 +31,4 @@ intro:
         card slot * Sleep and regeneration program * Dual Control functionality
   heading: "-"
   description: "-"
-main:
-  heading: "-"
-  description: "-"
-  image1:
-    alt: "-"
-    image: /img/blog-index.jpg
-  image2:
-    alt: "-"
-    image: /img/coffee.png
-  image3:
-    image: /img/chemex.jpg
-    alt: "-"
-full_image: /img/apple-touch-icon.png
-pricing:
-  heading: "-"
-  description: "-"
 ---
