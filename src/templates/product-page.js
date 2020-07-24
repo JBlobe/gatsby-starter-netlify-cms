@@ -77,6 +77,7 @@ const ProductPage = ({ data }) => {
         heading={frontmatter.heading}
         description={frontmatter.description}
         intro={frontmatter.intro}
+        buttonText={frontmatter.buttonText}
       />
     </Layout>
   )
