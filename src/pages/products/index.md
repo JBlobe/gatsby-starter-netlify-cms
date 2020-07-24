@@ -1,5 +1,4 @@
 ---
-heading: "-"
 path: /products
 templateKey: product-page
 title: B.BOX Professional
@@ -29,6 +28,4 @@ intro:
         * Dimensions (L x W x H): 23 x 22 x 7/16 cm * Weight: 2500g * 2-in-1
         Functionality * Edit mode * Large, easy-to-read touch display * Memory
         card slot * Sleep and regeneration program * Dual Control functionality
-  heading: "-"
-  description: "-"
 ---
