@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
+import BuyButton from '../components/BuyButton'
 
 export const ProductPageTemplate = ({
   image,
   title,
   description,
   intro,
+  buttonText,
 }) => (
   <div className="content">
     <div
@@ -37,7 +39,10 @@ export const ProductPageTemplate = ({
           <div className="columns">
             <div className="column is-7 is-offset-1">
               <p>{description}</p>
-            </div>
+              </div>
+          </div>
+          <div className="column is-7 is-offset-1">
+              <BuyButton price="10.000" text={buttonText} />
           </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -58,6 +63,7 @@ ProductPageTemplate.propTypes = {
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
   }),
+  buttonText: PropTypes.string,
 }
 
 const ProductPage = ({ data }) => {
@@ -99,6 +105,7 @@ export const productPageQuery = graphql`
           }
         }
         description
+        buttonText
         intro {
           blurbs {
             image {
