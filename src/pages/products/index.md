@@ -12,6 +12,7 @@ description: The control unit B.BOX Professional will impress you with its
   self-explanatory. It also features Edit Mode, a software tool that allows you
   to create your own indication-specific programs and store them in up to nine
   memory locations.
+buttonText: heute nur
 intro:
   blurbs:
     - image: /img/400_freestyle-b-box-professional-05.jpg
